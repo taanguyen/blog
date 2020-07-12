@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "Hashmap Hopping?"
+title:  "Hashmap Hopping? Think Graphs"
 date:   2020-07-12 13:30:47 -0400
 categories: leetcode graphs tech interviews
 ---
-# Hashmap Hopping? Think Graphs
-
 Let's have some coding fun, courtesy of LeetCode Challenge! 
 
 Reconstruct Itinerary 
@@ -78,7 +76,7 @@ So to prevent revisiting the same city, we could keep a visited set. But ooph! W
 
 Consider the input: [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
 
-We'll have "JFK", "KUL" ...and then...nothing. Welppp. :thinking:
+We'll have "JFK", "KUL" ...and then...nothing. Welppp. T_T
 
 ## When we're trying to do hashmap hopping, it's a good sign we're looking at a graph problem
 
@@ -94,7 +92,7 @@ for src,dest in tickets:
     adj[src].append(dest)
 ```
 
-Now that we've built out our adjacency list, we can lexically sort the airports. I sorted **to** airports in reverse lexical order, you'll see why in a bit :smile:.
+Now that we've built out our adjacency list, we can lexically sort the airports. I sorted **to** airports in reverse lexical order, you'll see why in a bit :)
 
 ```python
 for airport in adj: 
