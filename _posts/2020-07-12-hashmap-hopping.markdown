@@ -177,7 +177,7 @@ class Solution:
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
         def dfs(airport):					
             while adj_list[airport]:	
-                destination = adj[airport].pop()	# use each ticket exactly once
+                destination = adj_list[airport].pop()	# use each ticket exactly once
                 dfs(destination)					
             itinerary.append(airport)				# add airport to itinerary
             
@@ -186,7 +186,7 @@ class Solution:
         for src,dest in tickets:					# build a graph of airports
             adj_list[src].append(dest)
         for airport in adj: 
-            adj[airport] = sorted(adj[airport], reverse = True)
+            adj_list[airport] = sorted(adj_list[airport], reverse = True)
             
         dfs("JFK")						# start at JFK and fly to neighboring airports 
         return reversed(itinerary)
