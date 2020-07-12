@@ -185,7 +185,7 @@ class Solution:
         adj_list = defaultdict(list)
         for src,dest in tickets:					# build a graph of airports
             adj_list[src].append(dest)
-        for airport in adj: 
+        for airport in adj_list: 
             adj_list[airport] = sorted(adj_list[airport], reverse = True)
             
         dfs("JFK")						# start at JFK and fly to neighboring airports 
