@@ -67,7 +67,7 @@ Notice the Last In, First Out order in which we performed those steps:
 
 Now that we've settled on using a stack, let's see how we can use this stack to do math. 
 
-## When we have to parse a string for expression evaluation, it's time to use a stack
+## When we parse a string for expression evaluation, use a stack
 
 We read our string from left to right, character by character. 
 
