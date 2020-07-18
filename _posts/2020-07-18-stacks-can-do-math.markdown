@@ -137,9 +137,9 @@ With input `12 - ( 4 + 2 )`, we'll eventually store (-1) in our stack.
 ```python
  # operation is about to happen
     elif char in "+-":
-        res += sign * num			# add our current result to our current number 
+        res += sign * num           # add our current result to our current number 
         num = 0                     # reset num to build upcoming number
-        sign = [-1,1][char =="+"]	# a - b = a + (-b)
+        sign = [-1,1][char =="+"]   # a - b = a + (-b)
 ```
 
 <u>The open ( case:</u> 
@@ -150,7 +150,7 @@ Remember to reset our current result and sign back to their defaults of 0 and 1.
  # a new expression is about to happen
      elif char == "(":               
          st.append(res)             # store result up to this point  	
-         st.append(sign)			# store the sign of the current expression
+         st.append(sign)            # store the sign of the current expression
          res = 0                    # reset result for upcoming expression 
          sign = 1                   # reset sign for upcoming expression
 ```
@@ -159,7 +159,8 @@ Remember to reset our current result and sign back to their defaults of 0 and 1.
 
 Finish up evaluating the current expression. 
 
-With input `12 - ( 4 + 2 )`, we get a current result of 6. Our stack has: 12 | -1 | 
+With input `12 - ( 4 + 2 )`, we get a current result of 6. 
+Our stack has: | 12 | -1 | 
 
 We pop (-1) and apply it to 6, getting (-6)  
 
@@ -197,7 +198,7 @@ def calculate(self, s: str) -> int:
                 res *= st.pop()             
                 res += st.pop()             
                 num = 0      
-        return res + sign*num			# handles cases that don't end in ")", like 1 + 1
+        return res + sign*num     # handles cases that don't end in ")", like 1 + 1
 ```
 
 The time and space complexity are `O(n)`, as we process each character once and store intermediate results  in the stack.  
