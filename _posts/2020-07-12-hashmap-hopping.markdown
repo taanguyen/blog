@@ -152,11 +152,11 @@ So the dfs calls are returned in the opposite order in which they are called:
 
 dfs (some sink vertex) --------------------------------------- KUL     
 
-dfs (neighbor of neighbor of vertex) ------------------- JFK       
+dfs (neighbor of neighbor of vertex)     
 
-dfs (neighbor of vertex) ------------------------------------ NRT      
+dfs (neighbor of vertex)     
 
-dfs (vertex) ------------------------------------------------------ JFK        
+dfs (vertex) -------------------------------------------------- JFK        
 
 Knowing this, we can append an airport after visiting its neighbors and reverse the itinerary for our final result. 
 
@@ -164,7 +164,7 @@ Our dfs function is:
 
 ```python
 def dfs(airport):
-	while adj_list[airport]:
+    while adj_list[airport]:
         destination = adj_list[airport].pop()		
         dfs(destination)
     itinerary.append(airport)
@@ -179,11 +179,11 @@ class Solution:
             while adj_list[airport]:	
                 destination = adj_list[airport].pop()	# use each ticket exactly once
                 dfs(destination)					
-            itinerary.append(airport)				# add airport to itinerary
+            itinerary.append(airport)				    # add airport to itinerary
             
         itinerary = []
         adj_list = defaultdict(list)
-        for src,dest in tickets:					# build a graph of airports
+        for src,dest in tickets:				        # build a graph of airports
             adj_list[src].append(dest)
         for airport in adj_list: 
             adj_list[airport] = sorted(adj_list[airport], reverse = True)
@@ -191,7 +191,7 @@ class Solution:
         dfs("JFK")						# start at JFK and fly to neighboring airports 
         return reversed(itinerary)
 ```
-
+Now that you've learned how to use graphs for hashmap hopping, try [Evaluate Division](https://leetcode.com/problems/evaluate-division/). You got this! 
 
 
 
