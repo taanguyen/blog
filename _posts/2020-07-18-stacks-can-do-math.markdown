@@ -1,5 +1,3 @@
-# Stacks Can Do Math
-
 A month ago, I was on a video call with a few friends and we tried to crack the following problem. We flailed our brains around for 40 minutes before giving up. So let's revisit this tough cookie!!! :thumbsup:
 
 Basic Calculator
@@ -56,7 +54,7 @@ This LIFO property is useful for situations where we want to **process data and 
 
 If you're still not sure why we're using a stack, we'll walk through a concrete example right now! 
 
-Input: "(12 - ( 4 + 2 ))"
+Input: `(12 - ( 4 + 2 ))`
 
 Expected output: 6
 
@@ -64,8 +62,8 @@ Our grade-school training prompts us to evaluate the innermost parenthetical exp
 
 Notice the Last In, First Out order in which we performed those steps:
 
-- "(4 + 2)" is the last part of the string; "(4 + 2)" was evaluated first 
-- "12 - " is the first part of the string; "12 -" was evaluated last
+- `(4 + 2)` is the last part of the string; `(4 + 2)` was evaluated first 
+- `12 -` is the first part of the string; `12 -` was evaluated last
 
 Now that we've settled on using a stack, let's see how we can use this stack to do math. 
 
@@ -73,37 +71,36 @@ Now that we've settled on using a stack, let's see how we can use this stack to 
 
 We read our string from left to right, character by character. 
 
-- we see 12 - (, 
-  - 1, so our current number is 1
-  - 2, so our current number is 1 * 10 + 2 = 12
-  -  "-" sign, so we're done building our current number 
-  - open ( indicates the start of a new expression; we'll need to revisit 12 - later
-    -  store 12 - on the stack
-- we see 4 + 2 ) 
-  - 4, so our current number is 4 
-  - "+" sign, so we're about to see a new number; our current result is 4
-  - 2, so our current number is 2 
-  - we've seen 4 + 2 so far, so our current result is 6
-  - closing ) indicates that we've reached the end of our current expression 
-  - we need to combine our previous result "12 -" with our current result
+- we see `12 - (`
+  - `1`, so our current number is 1
+  - `2`, so our current number is 1 * 10 + 2 = 12
+  - `-` sign, so we're done building our current number 
+  - open `(` indicates the start of a new expression; we'll need to revisit `12 -` later
+  - store `12` and `-` on the stack
+- we see `4 + 2 )` 
+  - `4`, so our current number is 4 
+  - `+` sign, so we're about to see a new number; our current result is 4
+  - `2`, so our current number is 2 
+  - we've seen `4 + 2` so far, so our current result is 6
+  - closing `)` indicates that we've reached the end of our current expression 
+  - we need to combine our previous result `12 -` with our current result
     - previous result = 12 
     - current result = 6
     - 12 - 6 = 6 (desired output)
 
 From this example, we can tease out how the stack responds to each element. 
 
-The elements of our string are: (, ), +/-, and non-negative integers.
+The elements of our string are: `(`, `)`, `+`, `-`, and non-negative integers.
 
-- A open parenthesis indicates the start of a new expression
+- A open `(` indicates the start of a new expression
   - push the current result and the operator (+/-) onto the stack
-- A closing parenthesis indicates the end of our current expression
+- A closing `)` indicates the end of our current expression
   - pop the previous operator and previous result from the stack
   - combine (+/-) the previous result with the current result 
 - An integer indicates we're building our current number (multiplying by 10 and adding the integer)
-
-- A +/- indicates the operation to perform between our current number and the current result 
-  - " + ": add the current number to our current result 
-  - " - " : subtract the current number from our current result
+- A `+` / `-` indicates the operation to perform between our current number and the current result 
+  - ` + `: add the current number to our current result 
+  - ` - `: subtract the current number from our current result
   - +/- : indicate we're about to build a new number 
 
 Phew! We're done planning our solution. Onto the code! 
@@ -132,10 +129,10 @@ for char in s:
 
 a - b is the same as a + (-b)
 
-With input "12 - ( 4 + 2 )", we'll eventually store (-1) in our stack. 
+With input `12 - ( 4 + 2 )`, we'll eventually store (-1) in our stack. 
 
--  " - " operator sets sign = -1 
-- " + " operator sets sign = +1
+- `-` operator sets sign = -1 
+- `+` operator sets sign = +1
 
 ```python
  # operation is about to happen
@@ -162,7 +159,7 @@ Remember to reset our current result and sign back to their defaults of 0 and 1.
 
 Finish up evaluating the current expression. 
 
-With input "12 - ( 4 + 2 )", we get a current result of 6. Our stack has: 12 | -1 | 
+With input `12 - ( 4 + 2 )`, we get a current result of 6. Our stack has: 12 | -1 | 
 
 We pop (-1) and apply it to 6, getting (-6)  
 
@@ -174,7 +171,7 @@ We pop 12 and combine with (-6) to get an output of 6
         res += sign * num           # result of current expression
         res *= st.pop()             # apply sign; -(expr) subtracts, +(expr) adds 
         res += st.pop()             # add to previous result 
-        num = 0						# reset num to build upcoming number  
+        num = 0                     # reset num to build upcoming number  
                 
 ```
 
@@ -203,6 +200,6 @@ def calculate(self, s: str) -> int:
         return res + sign*num			# handles cases that don't end in ")", like 1 + 1
 ```
 
-The time and space complexity are O(n), as we process each character once and store intermediate results  in the stack.  
+The time and space complexity are `O(n)`, as we process each character once and store intermediate results  in the stack.  
 
 Now that you've learned how to use stacks for expression evaluation, try [Decode String](https://leetcode.com/problems/decode-string/). You got this! 
