@@ -50,7 +50,7 @@ Stacks process data in a Last In First Out (LIFO) order...Huh?
 
 Think of a stack of plates. When you wash the dishes, you'll remove the top plate. To add a plate, you'll add the plate to the top of the stack. The first plate in the stack is washed last and the last plate is washed first. Last in, first out. 
 
-This LIFO property is useful for situations where we want to **process data and save intermediate results for later use. **
+This LIFO property is useful for situations where we want to **process data and save intermediate results for later use.**
 
 If you're still not sure why we're using a stack, we'll walk through a concrete example right now! 
 
@@ -67,7 +67,7 @@ Notice the Last In, First Out order in which we performed those steps:
 
 Now that we've settled on using a stack, let's see how we can use this stack to do math. 
 
-## Parsing the string 
+## When we have to parse a string for expression evaluation, it's time to use a stack
 
 We read our string from left to right, character by character. 
 
