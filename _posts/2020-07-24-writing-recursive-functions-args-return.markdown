@@ -8,9 +8,9 @@ Let's consider a simple count function.
 
 ```python
 def count_down(num):
-	if num < 1: return 
-	print(str(num))
-	count_down(num - 1)
+    if num < 1: return 
+    print(str(num))
+    count_down(num - 1)
 ```
 
 If you call the function, say count_down(5), you'll get the printout:
@@ -44,8 +44,10 @@ Tree and graph algorithms often leverage recursion. As an example, consider the 
 
 ```python
 def size(root):
-	if not root: return 0	# base case: no root means no nodes in tree
-	return 1 + size(root.left) + size(root.right)	# nodes in tree = nodes of left subtree + nodes of right subtree
+    # base case: no root means no nodes in tree
+    if not root: return 0
+    # nodes in tree = nodes of left subtree + nodes of right subtree
+    return 1 + size(root.left) + size(root.right)	
 ```
 
 Boom, two lines of code! Life doesn't get much better than that. haha :P 
@@ -54,18 +56,18 @@ Compare this clean and simple implementation with the iterative version:
 
 ```python
 def size(root):
-	count = 0
-	queue = deque()
-	queue.append(root)
+    count = 0
+    queue = deque()
+    queue.append(root)
     # level-order traversal 
-	while queue:
-		node = queue.popleft()
-		count += 1 
-		if node.left:
-			queue.append(node.left)
-		if node.right:
-			queue.append(node.right)
-	return count 
+    while queue:
+        node = queue.popleft()
+        count += 1 
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+    return count 
 ```
 
 That's a mouthful in comparison. And you have to do several things manually- such as push, pop, and count each node. 
@@ -102,23 +104,23 @@ If you want to return all paths from root to leaf in a binary tree, you would ne
 
 ```python
  def binaryTreePaths(self, root):
-        def find_paths(root, path, all_paths):
-            if not root: return 
-            # add node to current path 
-            path.append(str(root.val))
-        	# reached a leaf, add current path to all_paths
-            if not root.left and not root.right:
-                all_paths.append("->".join(path))
-            # keep drilling down tree
-            find_paths(root.left, path, all_paths)
-            find_paths(root.right, path, all_paths)
-            # remove node from current path to store nodes in next path
-            path.pop()
+    def find_paths(root, path, all_paths):
+        if not root: return 
+        # add node to current path 
+        path.append(str(root.val))
+        # reached a leaf, add current path to all_paths
+        if not root.left and not root.right:
+            all_paths.append("->".join(path))
+        # keep drilling down tree
+        find_paths(root.left, path, all_paths)
+        find_paths(root.right, path, all_paths)
+        # remove node from current path to store nodes in next path
+        path.pop()
         
-        path = []
-        all_paths = []
-        find_paths(root, path, all_paths)
-        return all_paths
+    path = []
+    all_paths = []
+    find_paths(root, path, all_paths)
+    return all_paths
 ```
 
 Breaking down this example, we see the base case happens when our root doesn't exist (an empty tree). 
@@ -139,7 +141,7 @@ Then we check if that node is a leaf. If it is, we add it to our list all_paths
 ```python
 # reached a leaf, add current path to all_paths
 if not root.left and not root.right:
-	all_paths.append("->".join(path))
+    all_paths.append("->".join(path))
 ```
 
 We're done processing the node, so we make recursive calls to its left and right subtrees. 
@@ -184,11 +186,11 @@ def isBalanced(self, root: TreeNode) -> bool:
         # record imbalanced tree
             self.balanced = False
         # report back height of tree (to preceding calls)
-    	return max(leftHeight, rightHeight) + 1
+        return max(leftHeight, rightHeight) + 1
 
-self.balanced = True
-height(root)
-return self.balanced
+    self.balanced = True
+    height(root)
+    return self.balanced
 ```
 
 Each time we visit a node, we determine the height of the tree rooted at that node by finding `max(leftHeight, rightHeight) + 1`. 
