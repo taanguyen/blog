@@ -154,8 +154,8 @@ We want successive calls to:
 so `path` and `all_paths` are **arguments**
 
 ```python
- # keep drilling down tree
- find_paths(root.left, path, all_paths)		# successive calls "see" path and all_paths
+# successive calls "see" path and all_paths
+ find_paths(root.left, path, all_paths)		
  find_paths(root.right, path, all_paths)
 ```
 
