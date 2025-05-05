@@ -6,4 +6,11 @@ const eleventyNavigation = {
 ---
 # About
 
-I am an introverted person.
+My name is T.A. and I'm interested in: 
+- house dance
+- the mind-body connection
+- and living slowly
+
+Currently reading: Hidden Potential by Adam Grant
+
+Currently watching: Castle
