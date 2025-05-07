@@ -6,9 +6,9 @@ tags: ["dance", "personal"]
 ---
 
 ## My lackluster origin story
-I grew up rather reluctant to move. I was the kind of kid to stay indoors- reading, daydreaming, watching cartoons, or exercising my thumbs playing Pokemon on a Nintendo DS. I'm categorically bad at sports. 
+I grew up rather reluctant to move. I was the kind of kid to stay indoors- reading, daydreaming, watching cartoons, or exercising my thumbs playing Pokemon on a Nintendo DS. Also, I'm categorically bad at sports. 
 
-For someone who voluntarily avoids physical activity, I never imagined I would love dancing. I was 13 when I discovered K-pop, which sparked my interest in movement. I was increasingly drawn to this genre because the dancing looked cool, expressive, and a bit corny at times. As an Asian-American, I felt it was easy to relate to Asian idols, even if I didn't know any Korean.
+For someone who voluntarily avoids physical activity, I never imagined I would love dancing. I was 13 when I discovered K-pop, which sparked my interest in movement. I was increasingly drawn to this genre because the dancing looked cool and expressive, albeit corny at times. As an Asian-American, I greatly appreciated how Asian idols defied the stereotypes of Asians being geeky, awkward, unattractive, or lacking personality. 
 
 I kept my burgeoning interest in dance a secret from everyone, especially from my family. I thought I would be laughed at if anyone in my family knew how interested I was in dancing. So I didn't dance at all (except for occasional attemps at arm waves using the bathroom mirror).
 
@@ -21,11 +21,11 @@ It's easy for me to drown in a stream of negative thinking. _I'm too old to danc
 
 I've had success of varying degrees with meditation, diet cleansing, and other self-help life hacks. But so far, the easiest way for me to breathe through my insecurities is through **slow movement**. Slow running, slow qigong exercises, and slow practice of dance moves have all helped me observe my thoughts and let them be. 
 
-I'm 29 now and I feel some pressure to enter my thirties as someone who has more of her life sorted out. I have no ducks and no rows. I have no real plans. But in the meantime, I will keep dancing. My hope is to dance for as long as I am able to. 
+I'm 29 now and I feel pressure to enter my thirties as someone who has more of her life sorted out. I have no ducks and no rows. I have no real plans. But in the meantime, I will keep dancing. My hope is to dance for as long as I am able to. 
 
 ## Blogging for learning 
 
-Although experience is a wonderful teacher, I've never been able to learn a darn thing the first time around. Learning for me requires a long gestation period, for repetition and reflection. I'm starting this blog because I want to document what I'm learning in dance, slow movement, and life in general. As I approach thirty, I find the poem "For a New Beginning" apt, excerpt below. 
+Although experience is a wonderful teacher, I've never been able to learn a darn thing the first time around. Learning for me requires a long gestation period, for repetition and reflection. I'm starting this blog because I want to document what I'm learning in dance, slow movement, and life in general. I find the poem "For a New Beginning" apt, excerpt below. 
 
 >Though your destination is not yet clear
 ><br>You can trust the promise of this opening;
