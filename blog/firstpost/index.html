@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Learning to dance at 29 years old</title>
-		<meta name="description" content="On why I took so long to start and what I hope to lear">
+		<title>On dancing, slow movement, and blogging</title>
+		<meta name="description" content="Being on the brink of 30 and deciding to dance even when I feel old.">
 		<link rel="alternate" href="/blog/feed/feed.xml" type="application/atom+xml" title="House Dance Journey">
 		
 		
@@ -65,11 +65,21 @@ body {
 	color: var(--text-color);
 	background-color: var(--background-color);
 }
+
 html {
 	overflow-y: scroll;
 }
+
 body {
 	max-width: 40em;
+}
+
+blockquote {
+	background: #082840;
+	width: 100%;
+	border-left: #1493fb solid 5px;
+	margin-left: -2px;
+	padding: 10px;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -84,22 +94,26 @@ body {
 }
 
 /* Fluid images via https://www.zachleat.com/web/fluid-images/ */
-img{
-  max-width: 100%;
+img {
+	max-width: 100%;
 }
+
 img[width][height] {
-  height: auto;
+	height: auto;
 }
+
 img[src$=".svg"] {
-  width: 100%;
-  height: auto;
-  max-width: none;
+	width: 100%;
+	height: auto;
+	max-width: none;
 }
+
 video,
 iframe {
 	width: 100%;
 	height: auto;
 }
+
 iframe {
 	aspect-ratio: 16/9;
 }
@@ -107,6 +121,7 @@ iframe {
 p:last-child {
 	margin-bottom: 0;
 }
+
 p {
 	line-height: 1.5;
 }
@@ -118,9 +133,11 @@ li {
 a[href] {
 	color: var(--text-color-link);
 }
+
 a[href]:visited {
 	color: var(--text-color-link-visited);
 }
+
 a[href]:hover,
 a[href]:active {
 	color: var(--text-color-link-active);
@@ -130,6 +147,7 @@ main,
 footer {
 	padding: 1rem;
 }
+
 main :first-child {
 	margin-top: 0;
 }
@@ -146,9 +164,11 @@ header {
 	border-top: 1px dashed var(--color-gray-20);
 	padding: 1em 0;
 }
-.links-nextprev > * {
+
+.links-nextprev>* {
 	flex-grow: 1;
 }
+
 .links-nextprev-next {
 	text-align: right;
 }
@@ -156,6 +176,7 @@ header {
 table {
 	margin: 1em 0;
 }
+
 table td,
 table th {
 	padding-right: 1em;
@@ -165,9 +186,11 @@ pre,
 code {
 	font-family: var(--font-family-monospace);
 }
+
 pre:not([class*="language-"]) {
 	margin: .5em 0;
-	line-height: 1.375; /* 22px /16 */
+	line-height: 1.375;
+	/* 22px /16 */
 	-moz-tab-size: var(--syntax-tab-size);
 	-o-tab-size: var(--syntax-tab-size);
 	tab-size: var(--syntax-tab-size);
@@ -181,6 +204,7 @@ pre:not([class*="language-"]) {
 	word-break: normal;
 	overflow-x: auto;
 }
+
 code {
 	word-break: break-all;
 }
@@ -194,11 +218,14 @@ header {
 	align-items: center;
 	padding: 1em;
 }
+
 .home-link {
 	flex-grow: 1;
-	font-size: 1em; /* 16px /16 */
+	font-size: 1em;
+	/* 16px /16 */
 	font-weight: 700;
 }
+
 .home-link:link:not(:hover) {
 	text-decoration: none;
 }
@@ -211,12 +238,15 @@ header {
 	margin: 0;
 	list-style: none;
 }
+
 .nav-item {
 	display: inline-block;
 }
+
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
+
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
 }
@@ -228,6 +258,7 @@ header {
 	padding: 0;
 	padding-left: 1.5rem;
 }
+
 .postlist-item {
 	display: flex;
 	flex-wrap: wrap;
@@ -235,6 +266,7 @@ header {
 	counter-increment: start-from -1;
 	margin-bottom: 1em;
 }
+
 .postlist-item:before {
 	display: inline-block;
 	pointer-events: none;
@@ -243,16 +275,21 @@ header {
 	text-align: right;
 	margin-left: -1.5rem;
 }
+
 .postlist-date,
 .postlist-item:before {
-	font-size: 0.8125em; /* 13px /16 */
+	font-size: 0.8125em;
+	/* 13px /16 */
 	color: var(--color-gray-90);
 }
+
 .postlist-date {
 	word-spacing: -0.5px;
 }
+
 .postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
+	font-size: 1.1875em;
+	/* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
@@ -261,6 +298,7 @@ header {
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
 }
+
 .postlist-item-active .postlist-link {
 	font-weight: bold;
 }
@@ -273,7 +311,8 @@ header {
 	text-transform: capitalize;
 	font-style: italic;
 }
-.postlist-item > .post-tag {
+
+.postlist-item>.post-tag {
 	align-self: center;
 }
 
@@ -286,6 +325,7 @@ header {
 	padding: 0;
 	margin: 0;
 }
+
 .post-metadata time {
 	margin-right: 1em;
 }
@@ -480,15 +520,37 @@ pre[class*="language-diff-"] {
 				
 
 
-<h1 id="learning-to-dance-at-29-years-old">Learning to dance at 29 years old</h1>
+<h1 id="on-dancing-slow-movement-and-blogging">On dancing, slow movement, and blogging</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2025-05-05">05 May 2025</time></li>
-	<li><a href="/blog/tags/house-dance/" class="post-tag">house dance</a>, </li>
+	<li><time datetime="2025-05-07">07 May 2025</time></li>
+	<li><a href="/blog/tags/dance/" class="post-tag">dance</a>, </li>
 	<li><a href="/blog/tags/personal/" class="post-tag">personal</a></li>
 </ul>
 
-<h2 id="section-header">Section Header</h2>
+<h2 id="my-lackluster-origin-story">My lackluster origin story</h2>
+<p>I grew up rather reluctant to move. I was the kind of kid to stay indoors- reading, daydreaming, watching cartoons, or exercising my thumbs playing Pokemon on a Nintendo DS. I'm categorically bad at sports.</p>
+<p>For someone who voluntarily avoids physical activity, I never imagined I would love dancing. I was 13 when I discovered K-pop, which sparked my interest in movement. I was increasingly drawn to this genre because the dancing looked cool, expressive, and a bit corny at times. As an Asian-American, I felt it was easy to relate to Asian idols, even if I didn't know any Korean.</p>
+<p>I kept my burgeoning interest in dance a secret from everyone, especially from my family. I thought I would be laughed at if anyone in my family knew how interested I was in dancing. So I didn't dance at all (except for occasional attemps at arm waves using the bathroom mirror).</p>
+<p>Throughout my teenage years and 20s, I regularly consumed dance content but I didn't really start learning dance until January 2021, at the age of 25. I enrolled at Steezy Studio, an online platform for hermits like me to wiggle around in the comfort of our homes. I started out learning a few choreographed hip-hop routines, flailing around alone in the garage. Eventually, I found house dance and now I regularly practice house 5 or 6 days a week.</p>
+<h2 id="dancing-despite-insecurities">Dancing despite insecurities</h2>
+<p>I wish I could say that I was dedicated to dance from 2021 to today. But I often let my insecurities get the better of me. A lot of things come up for me when I dance, especially my insecurities around being incompetent and lacking cooridination, rhythm, and confidence.</p>
+<p>It's easy for me to drown in a stream of negative thinking. <em>I'm too old to dance. I started too late. I have no talent. I should give up.</em> Sometimes, the onslaught of shame is so loud and I can't seem to find the volume knob. But if I slow down and bring my mind back into my body, I feel better, by at least a quarter turn of the dial.</p>
+<p>I've had success of varying degrees with meditation, diet cleansing, and other self-help life hacks. But so far, the easiest way for me to breathe through my insecurities is through <strong>slow movement</strong>. Slow running, slow qigong exercises, and slow practice of dance moves have all helped me observe my thoughts and let them be.</p>
+<p>I'm 29 now and I feel some pressure to enter my thirties as someone who has more of her life sorted out. I have no ducks and no rows. I have no real plans. But in the meantime, I will keep dancing. My hope is to dance for as long as I am able to.</p>
+<h2 id="blogging-for-learning">Blogging for learning</h2>
+<p>Although experience is a wonderful teacher, I've never been able to learn a darn thing the first time around. Learning for me requires a long gestation period, for repetition and reflection. I'm starting this blog because I want to document what I'm learning in dance, slow movement, and life in general. As I approach thirty, I find the poem &quot;For a New Beginning&quot; apt, excerpt below.</p>
+<blockquote>
+<p>Though your destination is not yet clear
+<br>You can trust the promise of this opening;
+<br>Unfurl yourself into the grace of beginning
+<br>That is at one with your life’s desire.</p>
+<p>Awaken your spirit to adventure;
+<br>Hold nothing back, learn to find ease in risk;
+<br>Soon you will be home in a new rhythm,
+<br>For your soul senses the world that awaits you.</p>
+<p><br>- John O' Donohue</p>
+</blockquote>
 
 
 			</heading-anchors>
@@ -498,7 +560,7 @@ pre[class*="language-diff-"] {
 			<p><em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.0</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/firstpost/` was built on 2025-05-05T20:56:14.350Z -->
+		<!-- This page `/blog/firstpost/` was built on 2025-05-07T20:55:51.612Z -->
 		<script type="module" src="/blog/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
