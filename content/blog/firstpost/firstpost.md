@@ -6,7 +6,7 @@ tags: ["dance", "personal"]
 ---
 
 ## My lackluster origin story
-I grew up rather reluctant to move. I was the kind of kid to stay indoors- reading, daydreaming, watching cartoons, or exercising my thumbs playing Pokemon on a Nintendo DS. Also, I'm categorically bad at sports. 
+I grew up rather reluctant to move. I was the kind of kid to stay indoors- reading, daydreaming, watching cartoons, or exercising my thumbs playing Pokemon on a Gameboy Advance SP. Also, I'm categorically bad at sports. 
 
 For someone who voluntarily avoids physical activity, I never imagined I would love dancing. I was 13 when I discovered K-pop, which sparked my interest in movement. I was increasingly drawn to this genre because the dancing looked cool and expressive, albeit corny at times. As an Asian-American, I greatly appreciated how Asian idols defied the stereotype of Asians being geeky, awkward, unattractive, or lacking personality. 
 
