@@ -7,12 +7,10 @@ const eleventyNavigation = {
 # About
 
 My name is T.A. and I'm interested in: 
-- street and club dance
-- journalism and writing
+- house dance
 - the mind-body connection
-- movement as medicine
-- art, culture, technology
+- and living slowly
 
-🎧 Currently listening to: The Life You Can Save by Peter Singer 
+Currently reading: Hidden Potential by Adam Grant
 
-📺 Currently watching: nothing at the moment, but please talk to me if you love Castle
+Currently watching: Castle

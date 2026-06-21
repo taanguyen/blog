@@ -1,8 +1,8 @@
 export default {
-	title: "Movement and Life",
+	title: "House Dance Journey",
 	url: "https://taanguyen.github.io/blog/",
 	language: "en",
-	description: "Writing about movement and life.",
+	description: "Writing about house dance and life.",
 	author: {
 		name: "TA Nguyen",
 		email: "tangycode@gmail.com",
